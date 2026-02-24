@@ -13,5 +13,12 @@ function setup() {
   
     fill("#4e372e");
     rect(300, 0, 200, 300);
+
+    // fill(150);
+    // ellipse(0,0,200);
   
+  }
+
+  function mousePressed() {
+    // bite will appear
   }
