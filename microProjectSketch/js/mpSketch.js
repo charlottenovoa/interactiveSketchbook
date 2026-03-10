@@ -1,5 +1,7 @@
 let images = [];
 let currentIndex = 0;
+let steps=0;
+let maxSteps=7;
 
 function preload() {
     images[0] = loadImage("../microProjectSketch/img/neopolitan.png");
@@ -23,6 +25,8 @@ function setup() {
 function draw() {
     background(0);
 
+    let sectionHeight = height / maxSteps;
+
     let img = images[currentIndex];
     image(img, 0, 0);
 
@@ -31,6 +35,12 @@ function draw() {
     textSize(20);
     text("press mouse to bite!", width/2, 20);
 
+    noStroke();
+  for (let i =0; i<steps; i++) {
+    fill("#487540");
+    rect(5, i * sectionHeight, 20, sectionHeight);
+  }
+
 }
 
 function mousePressed() {
@@ -38,5 +48,27 @@ function mousePressed() {
         if(currentIndex >= images.length) {
             currentIndex = 0;
         }
+
+        if (steps < maxSteps) {
+            steps += 1;
+          }
 }
+
+function keyPressed() {
+    steps = 0;
+}
+
+if (steps = maxSteps) {
+    fill("#ef8291");
+    rect(width/2, height/2, 400, 100);
+
+    fill("0");
+    textAlign(CENTER);
+    textSize(20);
+    text("FULL", width/2, height/2);
+
+
+}
+
+
   
