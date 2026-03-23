@@ -9,6 +9,7 @@
 body {
     background-color: #f4dde2;
     width: 100%;
+    cursor: url('../img/spoony.png') 16 16, auto;
 }
 
 .navbar {

@@ -11,11 +11,6 @@ body {
     width: 100%;
 }
 
-html { 
-  line-height: 1.5;
-  text-align: center;
-}
-
 .navbar {
     display: flex;
     justify-content: flex-start;
@@ -58,6 +53,24 @@ a{
     justify-content: space-around;
 }
 
+.text{
+    padding: 2%;
+}
+
+h3 {
+    font-family: "instrument-serif", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 15pt;
+}
+
+p {
+    font-family: "instrument-serif", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12pt;
+}
+
 .dropbtn {
     background-color: #4e372e;;
     font-family: "neutronic-rounded", sans-serif;
@@ -95,52 +108,91 @@ a{
   
   .dropdown:hover .dropbtn {background-color: #5a4137;}
 
-  .button-bar {
-    background: #f4dde2;
-    padding: 40px;
+  .features-grid {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: auto;
   }
   
-  .button {
-    position: relative;
+  @media (min-width: 900px) {
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+  }
+  
+  .features-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    margin: 1rem 0;
+    box-shadow: 0 0 20px 0 #00000033;
+  }
+  
+  @media (min-width: 900px) {
+    .features-card {
       margin: 0;
-      padding-left: 14px;
-      padding-right: 14px;
-      padding-top: 2.8px;
-      padding-bottom: 2.8px;
-      background: #4e372e;
-      color: white;
-      font-size: 14px;
+    }
   }
   
-  .button::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 0;
-    height: 0;
+  .features-icon {  
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
   }
   
-  .button:hover { background: #5a4137; }
-  
-  .next::after, .prev::after { border-style: solid; }
-  
-  .next::after {
-    right: -22px;
-    border-width: 11px;
-    border-color: transparent transparent transparent #4e372e;
+  @media (min-width: 700px) {
+    .features-icon {
+      width: 48px;
+      height: 48px;
+    }
   }
   
-  .next:hover::after {
-    border-left-color: #5a4137;
+  @media (min-width: 700px) {
+    .features-icon i {
+      font-size: 1.25rem
+    }
   }
   
-  .prev::after {
-    left: -22px;
-    border-color: transparent #4e372e transparent transparent;
-    border-width: 11px;
+  .features-icon.audio {
+    background-color: #4e372e;
+  }
+  
+  .features-icon.badge {
+    background-color: #4e372e;
+  }
+  
+  .features-icon.card {
+    background-color: #4e372e;
+  }
+  
+  .features-icon.fire {
+    background-color: #4e372e;
   }
   
   
-  .prev:hover::after {
-    border-right-color: #5a4137;
+  .features-text h2 {
+    font-size: 1rem;
+    margin-top: 0;
+    line-height: 1.25;
   }
+  
+  @media (min-width: 700px) {
+    .features-text h2 {
+      font-size: 1.25rem;
+      line-height: 1.3;
+    }
+  }
+  
+  .features-text p {
+    font-size: .9rem;
+    line-height: 1.3;
+  }
+  
