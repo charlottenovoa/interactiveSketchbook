@@ -13,7 +13,7 @@ function setup() {
     imageMode(CENTER);
     textSize(20);
 
-    maxBites = int(random(10, 30));
+    maxBites = int(random(30, 50));
 }
 
 function draw() {
