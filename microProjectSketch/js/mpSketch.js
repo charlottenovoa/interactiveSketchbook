@@ -14,7 +14,8 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(1000, 600);
+    var canvas = createCanvas(1000, 600);
+    canvas.parent('sketch-holder'); 
     imageMode(CENTER);
     textSize(20);
 
